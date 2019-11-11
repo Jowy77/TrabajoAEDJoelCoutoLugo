@@ -5,7 +5,7 @@
 	<groupId>dad.javafx.AED</groupId>
 	<artifactId>AccesoFicherosAleatorioJoelCoutoLugo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>AccesoDatosMVC</name>
+	<name>AccesoFicherosAleatorioJoelCoutoLugo</name>
 
 	<properties>
 		<maven.compiler.target>11</maven.compiler.target>
