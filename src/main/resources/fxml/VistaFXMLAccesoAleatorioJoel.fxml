@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="view" hgap="15.0" prefHeight="650.0" prefWidth="850.0" vgap="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints minWidth="15.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="15.0" />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints fillHeight="false" minHeight="10.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label text="Fichero residencias:">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <TextField fx:id="rutaTxt" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="428.0" GridPane.columnIndex="1">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <HBox alignment="BASELINE_LEFT" fillHeight="false" spacing="50.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="consultaIDBt" mnemonicParsing="false" prefHeight="20.0" prefWidth="131.0" text="Consultar Residencia" />
+            <Button fx:id="modPrecioBt" mnemonicParsing="false" text="Modificar Precio Mensual" />
+            <Label prefHeight="17.0" prefWidth="54.0" text="ID RESI" />
+            <TextField fx:id="resiID" alignment="BASELINE_CENTER" maxWidth="-Infinity" prefColumnCount="2" prefHeight="25.0" prefWidth="86.0" />
+         </children>
+      </HBox>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+         <children>
+            <Label text="Consulta residencias:">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tablaResidencias" prefHeight="380.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="50.0" text="ID">
+	                 <cellValueFactory><PropertyValueFactory property="id" />
+	       			 </cellValueFactory>
+       			 </TableColumn>
+                <TableColumn prefWidth="165.0" text="Residencia">
+	                  <cellValueFactory><PropertyValueFactory property="name" />
+	       			 </cellValueFactory>
+       			 </TableColumn>
+                  <TableColumn prefWidth="211.0" text="Codigo Universidad">
+	                  <cellValueFactory><PropertyValueFactory property="codUniversidad" />
+	       			 </cellValueFactory>
+	       		  </TableColumn>
+	       		  <TableColumn minWidth="0.0" prefWidth="175.0" text="Precio mensual">
+	                  <cellValueFactory><PropertyValueFactory property="precio" />
+	       			 </cellValueFactory>
+	       		  </TableColumn>
+	       		  <TableColumn maxWidth="200.0" prefWidth="168.0" text="Comedor">
+	                  <cellValueFactory><PropertyValueFactory property="comedorStr" />
+	       			 </cellValueFactory>
+	       		  </TableColumn>
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="insertarResidenciaBoton" alignment="CENTER" mnemonicParsing="false" text="Insertar Residencia" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="consultarBoton" mnemonicParsing="false" text="Seleccionar Fichero" GridPane.columnIndex="2" />
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</GridPane>
